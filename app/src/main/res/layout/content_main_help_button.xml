@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,13 +13,28 @@
     tools:showIn="@layout/activity_main_help_button">
 
 
-    <Button
-        android:layout_width="250sp"
-        android:layout_height="250sp"
-        android:background="@drawable/round_button"
-        android:text="@string/help_button_text"
-        android:textSize="33dp"
-        android:textColor="#ffffff"
-        android:layout_gravity="center"
-        android:onClick="sendForHelp"/>
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fallen_message"
+            android:textSize="22dp"
+            android:fontFamily="sans-serif-thin"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_above="@+id/help_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="61dp" />
+        <Button
+            android:layout_width="250sp"
+            android:layout_height="250sp"
+            android:background="@drawable/round_button"
+            android:text="@string/help_button_text"
+            android:textSize="33dp"
+            android:textColor="#ffffff"
+            android:onClick="sendForHelp"
+            android:id="@+id/help_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="98dp" />
+
+</RelativeLayout>
