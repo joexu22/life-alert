@@ -52,8 +52,20 @@
         android:layout_alignRight="@+id/editText"
         android:layout_below="@+id/editText"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Location"
+        android:textColorHint="#73736e" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_below="@+id/editText2"
+        android:ems="10"
+        android:hint="Issue"
         android:textColorHint="#73736e" />
 
 
@@ -63,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="login" />
+        android:text="login"
+        android:onClick="submit"/>
 
 </RelativeLayout>
