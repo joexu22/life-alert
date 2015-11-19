@@ -2,7 +2,7 @@
     <string name="app_name">LifeAlert</string>
     <string name="action_settings">Settings</string>
     <string name="help_button_text">HELP</string>
-    <string name="gcm_send_message">Test</string>
+    <string name="gcm_send_message">Token generated</string>
     <string name="token_error_message">Uhhhhh</string>
     <string name="fallen_message">Have you fallen and can\'t get up?</string>
     <!--<string name="gcm_defaultSenderId">lifealert-398b</string>-->

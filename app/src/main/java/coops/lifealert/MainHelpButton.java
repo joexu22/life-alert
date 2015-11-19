@@ -143,8 +143,9 @@ public class MainHelpButton extends AppCompatActivity {
         String msg = "";
         try {
             Bundle data = new Bundle();
-            data.putString("username", "NAME");
-            data.putString("location", "LOCATION");
+            data.putString("username", QuickstartPreferences.USERNAME);
+            data.putString("location", QuickstartPreferences.LOCATION);
+            data.putString("issue", QuickstartPreferences.ISSUE);
             String id = Integer.toString(12);
             gcm.send("lifealert-398b" + "@gcm.googleapis.com", id, data);
             msg = "Message Sent!";
