@@ -42,7 +42,7 @@
             android:exported="false">
         </service>
         <activity
-            android:name=".MainHelpButton"
+            android:name=".LoginPage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
