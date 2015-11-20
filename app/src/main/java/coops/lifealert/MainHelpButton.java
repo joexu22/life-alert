@@ -37,7 +37,7 @@ public class MainHelpButton extends AppCompatActivity {
         setContentView(R.layout.activity_main_help_button);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Toast.makeText(this, "Token Generated!", Toast.LENGTH_SHORT).show();
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -55,11 +55,11 @@ public class MainHelpButton extends AppCompatActivity {
             }
         };
 
-        if (checkPlayServices()) {
-            // Start IntentService to register this application with GCM.
-            Intent intent = new Intent(this, RegistrationIntentService.class);
-            startService(intent);
-        }
+//        if (checkPlayServices()) {
+//            // Start IntentService to register this application with GCM.
+//            Intent intent = new Intent(this, RegistrationIntentService.class);
+//            startService(intent);
+//        }
     }
 
     @Override
@@ -97,21 +97,21 @@ public class MainHelpButton extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private boolean checkPlayServices() {
-        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
-        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
-        if (resultCode != ConnectionResult.SUCCESS) {
-            if (apiAvailability.isUserResolvableError(resultCode)) {
-                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
-                        .show();
-            } else {
-                Log.i(TAG, "This device is not supported.");
-                finish();
-            }
-            return false;
-        }
-        return true;
-    }
+//    private boolean checkPlayServices() {
+//        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+//        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+//        if (resultCode != ConnectionResult.SUCCESS) {
+//            if (apiAvailability.isUserResolvableError(resultCode)) {
+//                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+//                        .show();
+//            } else {
+//                Log.i(TAG, "This device is not supported.");
+//                finish();
+//            }
+//            return false;
+//        }
+//        return true;
+//    }
 
     private void doGcmSendUpstreamMessage() {
     /*    final Activity activity = this;
@@ -140,19 +140,19 @@ public class MainHelpButton extends AppCompatActivity {
 
     public void sendForHelp(View view) {
         final GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-        String msg = "";
-        try {
-            Bundle data = new Bundle();
-            data.putString("username", QuickstartPreferences.USERNAME);
-            data.putString("location", QuickstartPreferences.LOCATION);
-            data.putString("issue", QuickstartPreferences.ISSUE);
-            String id = Integer.toString(12);
-            gcm.send("lifealert-398b" + "@gcm.googleapis.com", id, data);
-            msg = "Message Sent!";
-        } catch (IOException ex) {
-            msg = "Error :" + ex.getMessage();
-
-        }
+        String msg = "Message Sent!";
+//        try {
+//            Bundle data = new Bundle();
+//            data.putString("username", QuickstartPreferences.USERNAME);
+//            data.putString("location", QuickstartPreferences.LOCATION);
+//            data.putString("issue", QuickstartPreferences.ISSUE);
+//            String id = Integer.toString(12);
+//            gcm.send("lifealert-398b" + "@gcm.googleapis.com", id, data);
+//            msg = "Message Sent!";
+//        } catch (IOException ex) {
+//            msg = "Error :" + ex.getMessage();
+//
+//        }
         Toast.makeText(MainHelpButton.this, msg, Toast.LENGTH_SHORT).show();
 
     }
