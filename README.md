@@ -1,17 +1,18 @@
-# life-alert
+# Generalized Solution for Automated Assistence
 
-## To-do List
+## TODO List:
+
 ### Phase 1
-- [ ] "Login" screen that gets name and floor/office
-- [ ] Main screen with help button
-- [ ] Help button sends message to server
+- [ ] Location - Time/Space
+- [ ] Trigger
+- [ ] Broadcast
 
 ### Phase 2
-- [ ] Be able to receive message from server when someone signs up to help
-- [ ] Be able to receive message from server that someone needs help
-- [ ] Be able to click on message and spawn new activity screen to respond to help
+- [ ] Signal Membership
+- [ ] Signal Reception
+- [ ] Assistence
 
 ### Phase 3
-- [ ] Pain Meter with slide bar (stretch goal)!
+- [ ] Catagorize Assistence Type
 - [ ] Prettify
-- [ ] Spawn new activity that asks for more detail (w/ pain meter) when user clicks help button
+- [ ] Recursion - Load Distribution of Assist
